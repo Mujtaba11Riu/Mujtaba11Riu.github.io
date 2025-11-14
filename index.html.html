@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syed Mujtaba Zaidi | Hacker Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      line-height: 1.6;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Matrix Background */
+    .matrix-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: black;
+      pointer-events: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      margin: 80px 0 60px 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero-box {
+      background-color: rgba(10, 10, 10, 0.85);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.3), 0 0 30px rgba(0, 255, 0, 0.2);
+      backdrop-filter: blur(10px);
+      margin-bottom: 20px;
+      border: 1px solid rgba(0, 255, 0, 0.3);
+    }
+
+    .hero h1 {
+      color: #00e0ff;
+      font-size: 3em;
+      text-shadow: 0 0 6px #00e0ff, 0 0 px #00e0ff;
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      letter-spacing: .10em;
+      overflow: hidden;
+      border-right: .15em solid #ff0000;
+      white-space: nowrap;
+      display: inline-block;
+      animation: typing 3s steps(30, end) 1s both, blink-caret 0.75s step-end infinite 1s;
+    }
+
+    .hero h2 {
+      color: #00e0ff;
+      font-size: 1.3em;
+      text-shadow: 0 0 10px #00e0ff;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0
+      }
+
+      to {
+        width: 100%
+      }
+    }
+
+    @keyframes blink-caret {
+
+      0%,
+      100% {
+        border-color: transparent;
+      }
+
+      50% {
+        border-color: #ff0000;
+      }
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 30px;
+      background-color: rgba(10, 10, 10, 0.85);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+      backdrop-filter: blur(5px);
+      position: relative;
+      z-index: 10;
+    }
+
+    h3 {
+      color: #ff0000;
+      border-bottom: 2px solid #00ff00;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+      text-shadow: 0 0 1px #ff0000;
+    }
+
+    p,
+    li {
+      color: #00ff00;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    strong {
+      color: #00e0ff;
+    }
+
+    a {
+      color: #00e0ff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: #ff0000;
+      text-decoration: underline;
+      text-shadow: 0 0 10px #ff0000;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      color: #00e0ff;
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 14px;
+      text-shadow: 0 0 10px #00e0ff;
+      font-weight: bold;
+      background-color: rgba(10, 10, 10, 0.85);
+      border-radius: 15px;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2em;
+        animation: none;
+        border-right: none;
+        white-space: normal;
+      }
+
+      .hero h2 {
+        font-size: 1em;
+      }
+
+      .hero-box {
+        padding: 15px;
+      }
+
+      section {
+        padding: 15px;
+      }
+
+      h3 {
+        font-size: 1.2em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      .hero h1 {
+        font-size: 1.5em;
+      }
+
+      .hero {
+        margin: 40px 0 30px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Matrix Canvas Background -->
+  <canvas id="matrixCanvas" class="matrix-background"></canvas>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="hero-box">
+        <h1>Syed Mujtaba Zaidi</h1>
+      </div>
+      <div class="hero-box">
+        <h2>Cyber Security Enthusiast | Aspiring Ethical Hacker</h2>
+      </div>
+    </div>
+
+
+
+
+    <!-- About Me -->
+
+
+
+    <section>
+      <h3>About Me</h3>
+
+      <p>I am a <strong>Cyber Security Enthusiast</strong> with a strong interest in ethical hacking, penetration
+        testing, and digital defense. I am passionate about learning and applying cybersecurity techniques, actively
+        exploring network security, Linux, and web application testing to enhance my practical skills.</p>
+      <p>Currently, I focus on deep learning in programming, bug bounty hunting, and working on real-world cybersecurity
+        challenges to grow as a future ethical hacker. My goal is to contribute towards building a safer digital
+        environment while continuously sharpening my technical expertise.</p>
+    </section>
+
+
+
+    <!-- Education -->
+
+
+    <section>
+
+      <h3>Education & Academic Qualification</h3>
+
+      <ul>
+        <li>
+          Matric (General Science) <strong> 2018 </strong> FBISE
+
+        </li>
+        <li>
+          ICS (Computer Science) <strong> 2020 </strong> FBISE
+
+        </li>
+        <li>
+          B.A (A.D.A) <strong> 2023 </strong> KIU
+
+        </li>
+        <li>
+          BS in <strong> Cyber Security </strong> Riphah International University <strong> ( Expected 2028 ) </strong>
+        </li>
+      </ul>
+    </section>
+
+
+
+
+
+    <!-- Diplomas -->
+    <section>
+
+      <h3>Diplomas & Certifications</h3>
+      
+      <ul>
+
+        <li><a href="https://drive.google.com/file/d/1wCopSt-Zlgdr4EK52JjaupXckk7ie_sD/view?usp=sharing" target="_blank">ISC2 CC Certificate</a></li>
+
+        <li><a href="https://drive.google.com/file/d/1crhaom0prvjiB4biEiWkrRwGMmNIamBh/view?usp=drive_link"
+            target="_blank">Intro to Cybersecurity – CISCO</a></li>
+
+              <li><a href="https://drive.google.com/file/d/1bsf6q-_6HG8LmO2P-0cVyKRXxIGJIFrR/view?usp=drive_link"
+            target="_blank">Network Defense – CISCO</a></li>
+
+        
+
+        <li><a href="https://drive.google.com/file/d/1D6mTtJOWydDsCEhjdEHUa_Xxh_KXXzvC/view?usp=drive_link"
+            target="_blank">IT Essentials – 6 Months (CISCO Networking Academy)</a></li>
+
+        <li><a href="https://drive.google.com/file/d/1UiKR2RcBh92nJ2aHNTMwa0r5aLQ44EbC/view?usp=drive_link"
+            target="_blank">C++ Essentials 1 – 6 Months (CISCO Networking Academy)</a></li>
+
+        
+
+        <li><a href="https://drive.google.com/file/d/1_NrR3LHNP9iKJDUHWtGnQb8QXe1iHbug/view?usp=drive_link"
+            target="_blank">Intro to IoT & Digital Transformation – CISCO</a></li>
+
+      <li><a href="https://drive.google.com/file/d/1kfux39i1Vm7_6d8h7hvtUuFZ_JmpRnyo/view?usp=drive_link"
+            target="_blank">UI/UX Design – 3 Months</a></li>
+
+        <li><a href="https://drive.google.com/file/d/1ZzCGwXO6Wvp_YHwU74ll0mG-L4neaKhw/view?usp=drive_link"
+            target="_blank">Basic Computer Course – 6 Months</a></li>
+
+        <li>Advance Computer Course – 3 Months</li>
+        <li>Inpage Urdu – 3 Months</li>
+        <li>Graphic Designing – 6 Months</li>
+      </ul>
+    </section>
+
+
+
+
+
+    <!-- Projects -->
+
+
+    <section>
+      <h3>Projects</h3>
+      <ul>
+        <li>
+          <a href="https://github.com/Mujtaba11Riu/First_ict_project_Riu" target="_blank">First Project: ICT Project
+            (HTML / CSS):</a> Developed to practice structured programming concepts using basic HTML/CSS for
+          documentation.
+        </li>
+
+        <li>
+          <a href="https://github.com/Mujtaba11Riu/meal-ordering-system" target="_blank">Second Project: Programming
+            Fundamentals (C++):</a> First-semester end C++ project, console-based ordering system with categories, order
+          summary, and billing.
+        </li>
+
+        <li>
+          <a href="https://github.com/Mujtaba11Riu/Meal-Ordering-System-Java" target="_blank">Third Project: Object
+            Oriented Programming (C++ / Java):</a> Second-semester end project using core OOP concepts in Java to
+          develop a more advanced and structured meal ordering system.
+
+        </li>
+
+        <li>
+          <a href="https://github.com/Mujtaba11Riu/WiFi-Deauther-DLD-Project" target="_blank">Fourth Project: WiFi
+            Deauther (DLD Project):</a> Second-semester end project for Implementation of deauthentication simulation
+          for academic demonstration and defensive research (used to study Wi-Fi behavior and mitigation techniques).
+        </li>
+      </ul>
+    </section>
+
+
+    <!-- Achievements -->
+
+
+
+    <section>
+
+      <h3>Achievements</h3>
+      <ul>
+
+        <li>
+          <strong><a
+              href="https://www.linkedin.com/posts/syedmujtaba773_abrth3abrs1l3ntabrd3stroy3r-54th-cybersecurity-activity-7386034595961647104-fPau?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFOHceYB9Q2ouDO5fCKlg3CuT0ccWopS-e4"
+              target="_blank">PCC 2025 Qualifiers : Team " TH3 S1L3NT D3STROY3R " </a></strong><br>
+          Competed among 274+ teams nationwide and secured 54th position, solving 8 challenges in Web Exploitation,
+          Cryptography, Forensics, and Reverse Engineering. Gained valuable hands-on experience in cybersecurity
+          problem-solving and teamwork.
+        </li>
+
+
+        <li>
+          <strong><a
+              href="https://www.linkedin.com/posts/syedmujtaba773_ctf-cybersecurity-airctf2025-activity-7324356860508041217-76xv"
+              target="_blank">Top 6 Finalist – Air CTF 2025</a></strong><br>
+          Secured 6th position in the Air University CTF 2025 Finals – one of Pakistan's top-tier national cybersecurity
+          competitions. Our team StealthWorm competed against top universities including NUST, GIKI, COMSATS, UET,
+          Bahria, and others, showcasing strong teamwork and technical capabilities.
+        </li>
+
+        <li>
+          <strong><a
+              href="https://www.linkedin.com/posts/syedmujtaba773_cybersecurity-ctf-ethicalhacking-activity-7386040953712758784-QJ61?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFOHceYB9Q2ouDO5fCKlg3CuT0ccWopS-e4"
+              target="_blank">Levelling Up – AirOverflow Wargames</a></strong><br>
+          Successfully solved 15 CTF challenges across <>Reverse Engineering, Web Exploitation, Forensics, Cryptography,
+            and AI & Miscellaneous categories on AirOverflow. Enhanced problem-solving, analytical thinking, and
+            hands-on cybersecurity skills.
+        </li>
+
+
+
+
+        <li>
+          <strong><a
+              href="https://www.linkedin.com/posts/syedmujtaba773_syedmujtaba773-was-awarded-a-badge-activity-7315797577482878976-sknF"
+              target="_blank">TryHackMe Achievements</a></strong><br>
+          Earned the Webbed Badge on TryHackMe for completing web-based security labs. Current Rank: 1,199,241 | Level:
+          2 | Badges: 2/98. Continuing learning in practical cybersecurity challenges and labs.
+        </li>
+
+
+
+        <li>
+          <strong><a
+              href="https://www.linkedin.com/posts/muhammad-husnain-z995_nascon25-cybersecurity-ctf-activity-7319405155538354177-v6cc"
+              target="_blank">Qualified Finalists – NaSCon'25 CTF</a></strong><br>
+          Our team StealthWorm (Muhammad Sami Choudhary & Syed Mujtaba Zaidi) proudly secured 23rd place among 50+ teams
+          across Pakistan in the NaSCon'25 Capture The Flag competition hosted by FAST-NUCES Islamabad. This achievement
+          reflects our collaboration, consistency, and dedication in the cybersecurity field.
+        </li>
+
+
+
+      </ul>
+    </section>
+
+
+
+
+
+
+
+    <!-- Experience -->
+
+
+
+
+   <section>
+  <h3>Professional Experience</h3>
+  <ul>
+    <li> <strong> DevSecOps Intern </strong> at PHI Consulting  Currently Working</li>
+    <li>Restaurant <strong> Visiting Manager </strong> at Khoraak Khaana F10 Markaz Islamabad Responsible for weekend operations (Saturday & Sunday)</li>
+    <li>Cashier & Manager at ZAMO Shawarma F10 Markaz Islamabad <strong>2 Years </strong></li>
+    <li>Data Entry Operator at Torcia Academy 6th Road <strong>8 Months</strong></li>
+    <li>All-Rounder at Astore Inn Hotel & Restaurant Gilgit Baltistan <strong> 1 Year</strong></li>
+    <li>Data Entry Operator at Ropani Foundation <strong> 8 Months</strong></li>
+    <li>Composing Institute Papers <strong> 1 Year</strong></li>
+    
+  </ul>
+</section>
+
+
+
+
+
+    <!-- Other Expertise -->
+
+
+    <section>
+      <h3>Other Expertise</h3>
+      <ul>
+        <li>Communication & Decision Making</li>
+        <li>Complaint Handling & Contact Making</li>
+        <li>Work Under Pressure</li>
+      </ul>
+    </section>
+
+    <!-- Key Skills -->
+    <section>
+      <h3>Key Skills & Focus Areas</h3>
+      <ul>
+        <li>Deep learning in coding and programming</li>
+        <li>Penetration testing and bug bounty hunting</li>
+        <li>Linux and network security</li>
+        <li>Web development and web application testing</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="mailto:syedmujtaba773@gmail.com" target="_blank">Email: syedmujtaba773@gmail.com</a></li>
+        <li><a href="https://wa.me/923118334874" target="_blank">WhatsApp: Message Me</a></li>
+        <li><a href="https://github.com/Mujtaba11Riu" target="_blank">GitHub: Mujtaba11Riu</a></li>
+        <li><a href="https://www.linkedin.com/in/syedmujtaba773/" target="_blank">LinkedIn: syedmujtaba773</a></li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      © 2025 Syed Mujtaba Zaidi | Professional Hacker Portfolio | <span style="letter-spacing: 2px;">H4X0R S1NC3
+        2O21</span>
+    </footer>
+  </div>
+
+
+
+  <!-- Matrix Rain Effect Script -->
+
+
+
+<script>
+  const canvas = document.getElementById("matrixCanvas");
+  const ctx = canvas.getContext("2d");
+
+  // Set canvas to full screen
+  function resizeCanvas() {
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  const binary = "01";
+  const fontSize = 16;
+  let columns = Math.floor(canvas.width / fontSize);
+  let drops = Array(columns).fill(1);
+
+  function drawMatrix() {
+    // Semi-transparent background for fade effect
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#00ff00";
+    ctx.font = fontSize + "px monospace";
+
+    for (let i = 0; i < drops.length; i++) {
+      const text = binary[Math.floor(Math.random() * binary.length)];
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+      // Reset drop randomly
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  setInterval(drawMatrix, 50);
+</script> 
+
+</body>
+
+</html>
